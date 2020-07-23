@@ -13,6 +13,7 @@
 		CF026C5B24C9930E00CC6BF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF026C5A24C9930E00CC6BF2 /* Preview Assets.xcassets */; };
 		CF026C6624C9930E00CC6BF2 /* SlackStatusAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF026C6524C9930E00CC6BF2 /* SlackStatusAppTests.swift */; };
 		CF026C7124C9930E00CC6BF2 /* SlackStatusAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF026C7024C9930E00CC6BF2 /* SlackStatusAppUITests.swift */; };
+		CF026C7F24C9995100CC6BF2 /* SlackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF026C7E24C9995100CC6BF2 /* SlackManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		CF026C6C24C9930E00CC6BF2 /* SlackStatusAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlackStatusAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF026C7024C9930E00CC6BF2 /* SlackStatusAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackStatusAppUITests.swift; sourceTree = "<group>"; };
 		CF026C7224C9930E00CC6BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF026C7E24C9995100CC6BF2 /* SlackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				CF026C5324C9930D00CC6BF2 /* SlackStatusAppApp.swift */,
+				CF026C7E24C9995100CC6BF2 /* SlackManager.swift */,
 				CF026C5524C9930D00CC6BF2 /* ContentView.swift */,
 				CF026C5724C9930E00CC6BF2 /* Assets.xcassets */,
 				CF026C5C24C9930E00CC6BF2 /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				CF026C5624C9930D00CC6BF2 /* ContentView.swift in Sources */,
 				CF026C5424C9930D00CC6BF2 /* SlackStatusAppApp.swift in Sources */,
+				CF026C7F24C9995100CC6BF2 /* SlackManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
