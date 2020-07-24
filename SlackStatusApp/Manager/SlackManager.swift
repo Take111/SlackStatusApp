@@ -12,6 +12,7 @@ class SlackManager: ObservableObject {
 
     static private let token = "Bearer Own Token"
     static private let emojiUrl = "https://slack.com/api/emoji.list"
+    static private let statusFetcUrl = "https://slack.com/api/users.profile.get"
 
     @Published var emojies = [EmojiContent]()
 
@@ -64,6 +65,18 @@ class SlackManager: ObservableObject {
                     }
                 }
             }.resume()
+        }
+    }
+
+    func readStatus() {
+        var components = URLComponents(string: Self.statusFetcUrl)
+        let parameters: [URLQueryItem] = [URLQueryItem(name: "user", value: "Takenouchi")]
+
+        components?.queryItems = parameters
+        if let url = components?.url {
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.setValue(Self.token, forHTTPHeaderField: "Authorization")
         }
     }
 }
