@@ -11,7 +11,7 @@ import SwiftUI
 struct SlackStatusAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TopListView()
         }
     }
 }
