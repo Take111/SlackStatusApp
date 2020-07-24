@@ -137,16 +137,14 @@
 		CF026C5224C9930D00CC6BF2 /* SlackStatusApp */ = {
 			isa = PBXGroup;
 			children = (
-				CF026C8224CA667E00CC6BF2 /* Model */,
 				CF026C5324C9930D00CC6BF2 /* SlackStatusAppApp.swift */,
-				CF026C7E24C9995100CC6BF2 /* SlackManager.swift */,
-				CF026C5524C9930D00CC6BF2 /* ContentCell.swift */,
+				CF25F52124CB113D009E4149 /* Manager */,
+				CF25F52224CB1157009E4149 /* View */,
+				CF026C8224CA667E00CC6BF2 /* Model */,
 				CF236C2124CAD64600077641 /* NukeImage.swift */,
-				CF25F51F24CAD899009E4149 /* NukeImageView.swift */,
 				CF026C5724C9930E00CC6BF2 /* Assets.xcassets */,
 				CF026C5C24C9930E00CC6BF2 /* Info.plist */,
 				CF026C5924C9930E00CC6BF2 /* Preview Content */,
-				CF026C8024C9C2EF00CC6BF2 /* TopListView.swift */,
 			);
 			path = SlackStatusApp;
 			sourceTree = "<group>";
@@ -184,6 +182,25 @@
 				CF026C8524CA6FC400CC6BF2 /* Emoji.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CF25F52124CB113D009E4149 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				CF026C7E24C9995100CC6BF2 /* SlackManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		CF25F52224CB1157009E4149 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF25F51F24CAD899009E4149 /* NukeImageView.swift */,
+				CF026C5524C9930D00CC6BF2 /* ContentCell.swift */,
+				CF026C8024C9C2EF00CC6BF2 /* TopListView.swift */,
+			);
+			name = View;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D9B864390FCBD9984B3E74B5 /* Frameworks */ = {

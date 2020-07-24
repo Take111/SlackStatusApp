@@ -13,15 +13,15 @@ struct ContentCell: View {
     var body: some View {
         VStack {
             NukeImageView(nukeImage: NukeImage(url: URL(string: emoji.image)!))
+                .frame(width: 24, height: 24)
             Text(emoji.title)
+                .font(.callout)
+                .fontWeight(.thin)
         }
+        .frame(width: 124, height: 124)
+        .cornerRadius(8)
+        .background(Color.clear)
     }
-}
-
-struct UserContent: Identifiable, Hashable {
-    var id = UUID()
-    var image: String
-    var name: String
 }
 
 let emojiesSample = [EmojiContent(title: "サンプル", image: "photo")]

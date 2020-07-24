@@ -11,32 +11,27 @@ import UIKit
 class SlackManager: ObservableObject {
 
     static private let token = "Bearer Own Token"
+    static private let emojiUrl = "https://slack.com/api/emoji.list"
 
     @Published var emojies = [EmojiContent]()
 
 
-    init() {
-        fetchEmoji()
-    }
-
-    #warning("ここはPresenterで行う")
-    enum FetchContent {
-        case emoji
-        case status
-
-        var url: String {
-            switch self {
-            case .emoji:
-                return "https://slack.com/api/emoji.list"
-            case .status:
-                return ""
-            }
+    init(type: FetchContent) {
+        switch type {
+        case.emoji:
+            fetchEmoji()
+        case .status:
+            print("")
         }
     }
 
-    #warning("ここはPresenterで行う")
+    enum FetchContent {
+        case emoji
+        case status
+    }
+
     func fetchEmoji() {
-        let components = URLComponents(string: "https://slack.com/api/emoji.list")
+        let components = URLComponents(string: Self.emojiUrl)
         if let url = components?.url {
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
@@ -61,25 +56,14 @@ class SlackManager: ObservableObject {
                                 }
                             }
                             else {
-                                print("fetchEmoji: cast failure")
+                                print("fetchEmoji: emojies cast failure")
                             }
                         }
                     } catch let error as NSError {
-                        print("fetchEmoji: error: \(error.localizedDescription)")
+                        print("fetchEmoji: jsonObject failure error: \(error.localizedDescription)")
                     }
                 }
             }.resume()
         }
     }
-
-    #warning("後で使う")
-//    func fetchSlackContent<T: Codable>(content: FetchContent, model: T.Type, handler: @escaping (Result<T, Error>) -> Void) {
-//        var components = URLComponents(string: content.url)
-////        components.httpMethod = "GET"
-////
-////        URLSession.shared.dataTask(with: url) {[weak self] data, responce, error in
-////            guard let self = self else { return }
-////
-////        }
-//    }
 }
