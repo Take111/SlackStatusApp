@@ -6,6 +6,7 @@ This repo is sample for using LazyVGrid, Nuke with SwiftUI and Slack API.
 ### Enviornment
 - Xcode12 beta3
 
+### Previews
 |with NavigationLink|without NavigationLink|
 |----|----|
 |<img src="https://user-images.githubusercontent.com/46619995/88455455-5f7fd300-ceb0-11ea-8361-4d04427b4734.gif" width=250>|<img src="https://user-images.githubusercontent.com/46619995/88452874-3144c800-ce9d-11ea-8882-a334acb51093.gif" width=250>|
