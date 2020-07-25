@@ -1,16 +1,20 @@
 PODS:
   - Nuke (9.1.1)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Nuke
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - Nuke
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Nuke: af4301b154d3afd8a3b045a5194a9a773a00b7a8
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 3072fe3dee5835105df37dd963fabc3b4f1c9dd6
+PODFILE CHECKSUM: 17c588d22ebe640d30610844b7bfc79d4c859f4d
 
 COCOAPODS: 1.9.3

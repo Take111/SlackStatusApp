@@ -8,6 +8,7 @@ target 'SlackStatusApp' do
   # Pods for SlackStatusApp
 
   pod "Nuke"
+  pod "SwiftyJSON"
 
 
   target 'SlackStatusAppTests' do

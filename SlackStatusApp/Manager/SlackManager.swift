@@ -7,28 +7,29 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
 
 class SlackManager: ObservableObject {
 
     static private let token = "Bearer Own Token"
     static private let emojiUrl = "https://slack.com/api/emoji.list"
-    static private let statusFetcUrl = "https://slack.com/api/users.profile.get"
+    static private let statusFetchUrl = "https://slack.com/api/users.profile.get"
 
     @Published var emojies = [EmojiContent]()
-
+    @Published var status: SlackStatus?
 
     init(type: FetchContent) {
         switch type {
         case.emoji:
             fetchEmoji()
-        case .status:
-            print("")
+        case .readStatus:
+            readStatus()
         }
     }
 
     enum FetchContent {
         case emoji
-        case status
+        case readStatus
     }
 
     func fetchEmoji() {
@@ -69,14 +70,25 @@ class SlackManager: ObservableObject {
     }
 
     func readStatus() {
-        var components = URLComponents(string: Self.statusFetcUrl)
-        let parameters: [URLQueryItem] = [URLQueryItem(name: "user", value: "Takenouchi")]
+        var components = URLComponents(string: Self.statusFetchUrl)
+        let parameters: [URLQueryItem] = [URLQueryItem(name: "user", value: "US3EVNRPE")]
 
         components?.queryItems = parameters
         if let url = components?.url {
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
             request.setValue(Self.token, forHTTPHeaderField: "Authorization")
+
+            URLSession.shared.dataTask(with: request) {[weak self] data, _, error in
+                guard let self = self else { return }
+                if let error = error {
+                    print("readStatus: error: \(error.localizedDescription)")
+                }
+                else if let data = data {
+                    let json = JSON(data)
+                    self.status = SlackStatus(text: json["status_text"].stringValue, emoji: json["status_emoji"].stringValue)
+                }
+            }.resume()
         }
     }
 }
