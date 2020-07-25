@@ -19,10 +19,11 @@
 		CF026C7F24C9995100CC6BF2 /* SlackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF026C7E24C9995100CC6BF2 /* SlackManager.swift */; };
 		CF026C8124C9C2EF00CC6BF2 /* TopListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF026C8024C9C2EF00CC6BF2 /* TopListView.swift */; };
 		CF026C8424CA668E00CC6BF2 /* SlackStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF026C8324CA668E00CC6BF2 /* SlackStatus.swift */; };
-		CF026C8624CA6FC400CC6BF2 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF026C8524CA6FC400CC6BF2 /* Emoji.swift */; };
+		CF026C8624CA6FC400CC6BF2 /* EmojiContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF026C8524CA6FC400CC6BF2 /* EmojiContent.swift */; };
 		CF236C2224CAD64600077641 /* NukeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF236C2124CAD64600077641 /* NukeImage.swift */; };
 		CF25F52024CAD899009E4149 /* NukeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF25F51F24CAD899009E4149 /* NukeImageView.swift */; };
 		CF5E9D3B24CBB59800D96735 /* SlackStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5E9D3A24CBB59800D96735 /* SlackStatusView.swift */; };
+		CF5E9D3D24CC2FCC00D96735 /* EmojiDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5E9D3C24CC2FCC00D96735 /* EmojiDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,10 +65,11 @@
 		CF026C7E24C9995100CC6BF2 /* SlackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackManager.swift; sourceTree = "<group>"; };
 		CF026C8024C9C2EF00CC6BF2 /* TopListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListView.swift; sourceTree = "<group>"; };
 		CF026C8324CA668E00CC6BF2 /* SlackStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackStatus.swift; sourceTree = "<group>"; };
-		CF026C8524CA6FC400CC6BF2 /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		CF026C8524CA6FC400CC6BF2 /* EmojiContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiContent.swift; sourceTree = "<group>"; };
 		CF236C2124CAD64600077641 /* NukeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NukeImage.swift; sourceTree = "<group>"; };
 		CF25F51F24CAD899009E4149 /* NukeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NukeImageView.swift; sourceTree = "<group>"; };
 		CF5E9D3A24CBB59800D96735 /* SlackStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackStatusView.swift; sourceTree = "<group>"; };
+		CF5E9D3C24CC2FCC00D96735 /* EmojiDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiDetail.swift; sourceTree = "<group>"; };
 		D2E0F1754866B4FDBA4B8D9D /* Pods-SlackStatusApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackStatusApp.release.xcconfig"; path = "Target Support Files/Pods-SlackStatusApp/Pods-SlackStatusApp.release.xcconfig"; sourceTree = "<group>"; };
 		D7DF1D4F726A81560C7E3923 /* Pods_SlackStatusApp_SlackStatusAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlackStatusApp_SlackStatusAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6AE144027370AB36A0B8542 /* Pods-SlackStatusAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackStatusAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SlackStatusAppTests/Pods-SlackStatusAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				CF026C8324CA668E00CC6BF2 /* SlackStatus.swift */,
-				CF026C8524CA6FC400CC6BF2 /* Emoji.swift */,
+				CF026C8524CA6FC400CC6BF2 /* EmojiContent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,6 +203,7 @@
 				CF026C5524C9930D00CC6BF2 /* ContentCell.swift */,
 				CF5E9D3A24CBB59800D96735 /* SlackStatusView.swift */,
 				CF026C8024C9C2EF00CC6BF2 /* TopListView.swift */,
+				CF5E9D3C24CC2FCC00D96735 /* EmojiDetail.swift */,
 			);
 			name = View;
 			path = ..;
@@ -461,7 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF026C8624CA6FC400CC6BF2 /* Emoji.swift in Sources */,
+				CF026C8624CA6FC400CC6BF2 /* EmojiContent.swift in Sources */,
 				CF026C8124C9C2EF00CC6BF2 /* TopListView.swift in Sources */,
 				CF236C2224CAD64600077641 /* NukeImage.swift in Sources */,
 				CF026C5624C9930D00CC6BF2 /* ContentCell.swift in Sources */,
@@ -470,6 +473,7 @@
 				CF026C8424CA668E00CC6BF2 /* SlackStatus.swift in Sources */,
 				CF026C7F24C9995100CC6BF2 /* SlackManager.swift in Sources */,
 				CF25F52024CAD899009E4149 /* NukeImageView.swift in Sources */,
+				CF5E9D3D24CC2FCC00D96735 /* EmojiDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,16 +11,19 @@ struct ContentCell: View {
     @State var emoji: EmojiContent
 
     var body: some View {
-        VStack {
-            NukeImageView(nukeImage: NukeImage(url: URL(string: emoji.image)!))
-                .frame(width: 24, height: 24)
-            Text(emoji.title)
-                .font(.callout)
-                .fontWeight(.thin)
+        NavigationLink(destination: EmojiDetail(emoji: emoji)) {
+            VStack {
+                NukeImageView(nukeImage: NukeImage(url: URL(string: emoji.image)!))
+                    .frame(width: 24, height: 24)
+                    .background(Color.white)
+                Text(emoji.title)
+                    .font(.callout)
+                    .fontWeight(.thin)
+                    .foregroundColor(Color.black)
+            }
+            .frame(width: 124, height: 124)
+            .background(Color.clear)
         }
-        .frame(width: 124, height: 124)
-        .cornerRadius(8)
-        .background(Color.clear)
     }
 }
 

@@ -12,6 +12,7 @@ struct NukeImageView: View {
 
     var body: some View {
         Image(uiImage: nukeImage.image)
+            .resizable()
     }
 }
 
